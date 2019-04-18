@@ -5,24 +5,18 @@
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style
 //============================================================================
-
-
-
 #include <iostream>
 #include <cstdio>
 #include <string>
 #include <queue>
 #include <stack>
 #include <map>
-
 using namespace std;
-
 struct Node{
     double num;
     char op;
     bool flag;
 };
-
 string Str;
 stack <Node> s;
 queue <Node> q;
@@ -97,7 +91,6 @@ double Cal(){
     return s.top().num;                 //   返回栈顶数字
 }
 
-
 int main(){
     op['+'] = op['-'] = 1;
     op['*'] = op['/'] = 2;    // Str.end(); it != Str.begin()
@@ -109,12 +102,8 @@ int main(){
             if(*it == ' ')     //*it = " "
                 Str.erase(it); //string.erase(it)
         }
-
         change();
         printf("%.2f\n",Cal());
-
-
-
     }
     return 0;
 }
